@@ -9,7 +9,7 @@ class ParamsController < ApplicationController
     else
       message = ""
     end 
-    
+    i
     render json: {your_name: input_name, special_message: message}
   end
   
