@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  get '/params_game_url' => 'params#query_params_game'
+  get '/names_url' => 'params#name_action'
+  get '/games_url' => 'params#guess_game'
 
 end
