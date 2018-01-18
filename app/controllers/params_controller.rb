@@ -27,4 +27,20 @@ class ParamsController < ApplicationController
 
     render json: {guess: input_guess, answer: message_2}
   end
+
+  def segment_games
+    input_guess = params[:guess].to_i
+    num = 42
+
+    if input_guess == num 
+      message_2 = "You got it!"
+    elsif input_guess < num
+      message_2 = "Too low, guess higher!"
+    else
+      message_2 = "Too high, guess lower!"
+    end
+
+    render json: {guess: input_guess, answer: message_2}
+
+  end
 end
